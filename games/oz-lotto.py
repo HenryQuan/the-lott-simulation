@@ -3,7 +3,9 @@ import random
 import time
 
 PRICE = 1.3
-DIVISION = 'Div 4'
+# It will take some time starting from Div 5
+# Div 1 probably takes forever... (Don't blame me if you lost 70 million)
+DIVISION = 'Div 1'
 GAME_PER_WEEK = 50
 
 # return a list of 'num' random numbers from 1 to 45
