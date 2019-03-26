@@ -7,11 +7,11 @@ PRICE = 1.3
 # Div 1 probably takes forever... (Don't blame me if you lost 70 million)
 DIVISION = 'Div 1'
 GAME_PER_WEEK = 50
+GAME = list(range(1, 46))
 
 # return a list of 'num' random numbers from 1 to 45
 def getTicket(num):
-    game = list(range(1, 46))
-    return random.sample(game, num)
+    return random.sample(GAME, num)
 
 def matching(curr, winning):
     match = 0
