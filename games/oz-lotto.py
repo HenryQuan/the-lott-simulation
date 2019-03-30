@@ -18,5 +18,6 @@ def getPrice(match, sup):
     else:
         return 'Lose'
 
-oz_lotto = Lott(7, 2, 1.3, 'Div 4', 50, 45, getPrice)
+oz_lotto = Lott(7, 2, 1.3, 'Div 7', 50, 45, getPrice)
 oz_lotto.playGame()
+# oz_lotto.avg_time(100)

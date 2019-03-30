@@ -2,7 +2,7 @@ import random
 import time
 
 class Lott:
-    def __init__(self, num, sup, price, div, game_per_week, game_range, price_condition_func):
+    def __init__(self, num, sup, price, div, game_per_week, game_range, price_condition_func, show_text=True):
         self.price = price
         self.div = div
         self.game_per_week = game_per_week
@@ -11,11 +11,12 @@ class Lott:
 
         # get winning ticket
         self.winning = self.getTicket(num + sup)
-        print('The winning ticket is {}.'.format(self.winning))
+        if show_text: print('The winning ticket is {}.'.format(self.winning))
 
         # get number and supplementary
         self.numberList = self.winning[:num]
         self.supList = self.winning[-sup:]
+        self.plain_mode = show_text
 
     # return a list of 'num' random numbers from 1 to range
     def getTicket(self, num):
@@ -42,12 +43,22 @@ class Lott:
             curr = self.getTicket(7)
             game += 1
 
-            print('Game #{} (${}) - {}      '.format(game, int(game * self.price), curr), end='')
-            print('\r', end='')
+            if self.plain_mode: print('Game #{} (${}) - {}      '.format(game, int(game * self.price), curr), end='')
+            if self.plain_mode: print('\r', end='')
 
             reward = self.getPrice(curr)
             if reward == self.div:
                 break
 
-        print('\n\nTo get {} price, you need to play {} games and that costs ${}.'.format(reward, game, int(game * self.price)))
-        print('It will take {:.2f} year(s) if you play {} game(s) per week.\n'.format(game / 52 / self.game_per_week, self.game_per_week))
+        time_taken = game / 52 / self.game_per_week
+        if self.plain_mode: print('\n\nTo get {} price, you need to play {} games and that costs ${}.'.format(reward, game, int(game * self.price)))
+        if self.plain_mode: print('It will take {:.2f} year(s) if you play {} game(s) per week.\n'.format(time_taken, self.game_per_week))
+        if not self.plain_mode: print(time_taken)
+        return time_taken
+        
+    # calculate avg time taken
+    def avg_time(self, num):
+        total = 0
+        for x in range(0, num):
+            total += self.playGame()
+        print('To get {} price, it takes around {:.2f} year(s)'.format(self.div, total / num))
