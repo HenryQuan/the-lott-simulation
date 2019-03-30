@@ -2,6 +2,7 @@
 Written in Python3 and this is only for fun.
 ## Games
 #### Oz Lotto
-I have tried over 80,000,000 games and no Div 1. ~~Dream~~
+I have won $15 so far but div 1 price is a dream.
 
+***
 More coming soon or not...
