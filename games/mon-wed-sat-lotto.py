@@ -16,5 +16,5 @@ def getPrice(match, sup):
     else:
         return 'Lose'
 
-saturday_lotto = Lott(6, 2, 0.715, 'Div 6', 50, 45, getPrice)
-saturday_lotto.playGame()
+mon_wed_sat_lotto = Lott(6, 2, 0.715, 'Div 1', 50, 45, getPrice)
+mon_wed_sat_lotto.playGame()
