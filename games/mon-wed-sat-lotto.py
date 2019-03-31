@@ -16,6 +16,6 @@ def getPrice(match, sup):
     else:
         return 'Lose'
 
-mon_wed_sat_lotto = Lott(6, 2, 0.715, 'Div 2', 50, 45, getPrice)
+mon_wed_sat_lotto = Lott(6, 2, 0.715, 'Div 1', 50, 45, getPrice, False)
 mon_wed_sat_lotto.playGame()
-# mon_wed_sat_lotto.avg_time(100)
+# mon_wed_sat_lotto.avg_time(5)
