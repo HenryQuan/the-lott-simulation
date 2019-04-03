@@ -40,4 +40,4 @@ Only 270,000 numbers in total. It has the second highest change to win (lower th
 - For Set for Life, you can occasionally win 10 to 20 dollars (easier than Saturday and Monday & Wednesday Lotto), $35 is rare and it is unlikely to win Div 4 onwards.
 - For Lotto Strike, you can win 1 dollar and occasionally win 100 dollars, $1k is super rare and unlikely to win Div 1.
 
-Lucky Lotteries is recomded. 1 in 270,000 is actually possible.
+Lucky Lotteries is recommended. 1 in 270,000 is actually possible.
